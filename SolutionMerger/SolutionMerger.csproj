@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestItems\Property\Property.Project1\Class1.cs" />
+    <Compile Remove="TestItems\Property\Property.Project2\Class1.cs" />
+    <Compile Remove="TestItems\Reservation\Reservation.Project1\Class1.cs" />
+    <Compile Remove="TestItems\Reservation\Reservation.Project2\Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestItems\Property\Property.Project1\Class1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Property\Property.Project1\Property.Project1.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Property\Property.Project2\Class1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Property\Property.Project2\Property.Project2.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Property\Property.sln">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Reservation\Reservation.Project1\Class1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Reservation\Reservation.Project1\Reservation.Project1.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Reservation\Reservation.Project2\Class1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Reservation\Reservation.Project2\Reservation.Project2.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestItems\Reservation\Reservation.sln">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
