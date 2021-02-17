@@ -70,6 +70,7 @@ namespace SolutionMerger
 							{
 								foreach (var line in section.SubItems)
 								{
+									//We dont want to duplicate the lines that in these sections. Each solution probably has a set of lines duplicated with all the others
 									if (!uniqueLines.Contains(line))
 									{
 										file.WriteLine(line);
@@ -82,6 +83,8 @@ namespace SolutionMerger
 
 						}
 
+
+						//We want to put the top level items in each solution inside their solution folders
 						if (gs.SectionType == "NestedProjects")
 						{
 							foreach (var s in solutions)
@@ -107,6 +110,11 @@ namespace SolutionMerger
 			}
 		}
 
+
+		/// <summary>
+		/// If there is a Docs folder in 2 solutions, it will rename it to {Solution1}.Docs and {Solution2}.Docs
+		/// </summary>
+		/// <param name="solutions"></param>
 		private void PrefixDuplicatedProjectNames(Solution[] solutions)
 		{
 
@@ -130,6 +138,8 @@ namespace SolutionMerger
 					}
 				}
 			}
+
+			//cant change theese till the end as we want them to keep matching with the duplicates
 			foreach(var ptu in projectsToUpdate)
 			{
 				ptu.Name = ptu.SolutionName + "." + ptu.Name;
